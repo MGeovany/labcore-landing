@@ -94,20 +94,17 @@ export function Roles() {
           transition={{ duration: 0.5 }}
         >
           <p
-            className="text-sm font-semibold uppercase tracking-wider text-cyan-500"
-            style={{ fontFamily: 'var(--font-body)' }}
+            className="text-sm font-semibold uppercase tracking-wider text-cyan-500 font-body"
           >
             Pensado para cada rol
           </p>
           <h2
-            className="text-4xl md:text-5xl text-gray-900 mb-4"
-            style={{ fontFamily: 'var(--font-body)' }}
+            className="text-4xl md:text-5xl text-gray-900 mb-4 font-body"
           >
             Qué hace cada rol en LabCore
           </h2>
           <p
-            className="mt-3 text-base text-gray-500"
-            style={{ fontFamily: 'var(--font-body)' }}
+            className="mt-3 text-base text-gray-500 font-body"
           >
             Flujos de trabajo adaptados a cada miembro de tu equipo de
             laboratorio.
@@ -149,8 +146,7 @@ export function Roles() {
                   <div className="grid gap-8 md:grid-cols-2">
                     {/* Left: description + outcomes */}
                     <div>
-                      <h3 className="text-xl font-medium text-gray-900"
-                        style={{ fontFamily: 'var(--font-body)' }}>
+                      <h3 className="text-xl font-medium text-gray-900 font-body">
                         {currentRole.title}
                       </h3>
                       <p className="mt-3 leading-relaxed text-gray-500">

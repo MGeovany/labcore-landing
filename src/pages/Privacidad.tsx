@@ -6,12 +6,12 @@ const SUPPORT_EMAIL = 'marlon.castro@thefndrs.com'
 export function PrivacidadPage() {
   return (
     <LegalLayout title="Política de privacidad">
-      <article className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+      <article className="rounded-xl border border-gray-200 bg-white overflow-hidden font-poppins">
         <div className="border-b border-gray-100 px-6 py-5">
-          <h1 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
+          <h1 className="text-xl font-bold text-gray-900 font-body">
             Política de privacidad
           </h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 font-body">
             Última actualización:{' '}
             {new Date().toLocaleDateString('es-ES', {
               year: 'numeric',
@@ -22,7 +22,7 @@ export function PrivacidadPage() {
         </div>
         <div className="space-y-6 px-6 py-6 text-sm text-gray-700">
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               1. Responsable del tratamiento
             </h2>
             <p>
@@ -42,7 +42,7 @@ export function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               2. Datos que recogemos
             </h2>
             <p>
@@ -56,7 +56,7 @@ export function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               3. Finalidad y base legal
             </h2>
             <p>
@@ -69,7 +69,7 @@ export function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               4. Conservación y seguridad
             </h2>
             <p>
@@ -81,7 +81,7 @@ export function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">5. Derechos</h2>
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">5. Derechos</h2>
             <p>
               Los interesados pueden ejercer los derechos de acceso,
               rectificación, supresión, limitación del tratamiento, portabilidad

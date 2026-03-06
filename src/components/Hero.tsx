@@ -37,7 +37,7 @@ export function Hero() {
             className="text-4xl sm:text-5xl lg:text-7xl font-[family-name:var(--font-display)] text-gray-900 leading-[1.1] mb-6 sm:mb-8"
           >
             Gestiona tu laboratorio con <br />
-            <span className="text-cyan-500 italic">claridad y precisión</span>
+            <span className="text-cyan-500 italic">claridad & precisión</span>
           </motion.h1>
 
           <motion.div

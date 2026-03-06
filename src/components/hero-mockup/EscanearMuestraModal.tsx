@@ -35,8 +35,7 @@ export function EscanearMuestraModal({ open, onOpenChange }: EscanearMuestraModa
       >
         <h3
           id="escanear-muestra-title"
-          className="text-lg font-semibold text-gray-900 mb-3 font-[family-name:var(--font-body)]"
-          style={{ fontFamily: 'var(--font-body)' }}
+          className="text-lg font-semibold text-gray-900 mb-3 font-body"
         >
           Escanear muestra
         </h3>

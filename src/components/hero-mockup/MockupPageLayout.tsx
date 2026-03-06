@@ -18,7 +18,7 @@ export function MockupPageLayout({
     <div className="col-span-12 md:col-span-10">
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h3 className="text-xl font-medium text-gray-900 font-[family-name:var(--font-body)]">
+          <h3 className="text-xl font-medium text-gray-900 font-body">
             {title}
           </h3>
           <p className="text-xs text-gray-400 mt-0.5">{subtitle}</p>

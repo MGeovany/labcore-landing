@@ -19,8 +19,7 @@ export function SampleQueueHeader({
     <div className="flex justify-between items-center mb-8">
       <div>
         <h3
-          className="text-xl font-medium text-gray-900"
-          style={{ fontFamily: 'var(--font-body)' }}
+          className="text-xl font-medium text-gray-900 font-body"
         >
           {title}
         </h3>

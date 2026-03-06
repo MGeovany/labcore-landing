@@ -11,6 +11,11 @@
   --color-border: #f3f4f6;
 }
 
+.font-poppins,
+.font-body {
+  font-family: var(--font-body);
+}
+
 body {
   font-family: var(--font-body);
   color: var(--color-text-main);

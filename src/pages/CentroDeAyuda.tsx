@@ -19,12 +19,12 @@ export function CentroDeAyudaPage() {
 
   return (
     <LegalLayout title="Centro de ayuda">
-      <div className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+      <div className="rounded-xl border border-gray-200 bg-white overflow-hidden font-poppins">
         <div className="border-b border-gray-100 px-6 py-5">
-          <h1 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
+          <h1 className="text-xl font-bold text-gray-900 font-body">
             Centro de ayuda
           </h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 font-body">
             Redacte su mensaje y se abrirá su cliente de correo para enviarlo a
             soporte.
           </p>

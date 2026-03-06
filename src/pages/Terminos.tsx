@@ -6,12 +6,12 @@ const SUPPORT_EMAIL = 'marlon.castro@thefndrs.com'
 export function TerminosPage() {
   return (
     <LegalLayout title="Términos de uso">
-      <article className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+      <article className="rounded-xl border border-gray-200 bg-white overflow-hidden font-poppins">
         <div className="border-b border-gray-100 px-6 py-5">
-          <h1 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
+          <h1 className="text-xl font-bold text-gray-900 font-body">
             Términos de uso
           </h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 font-body">
             Última actualización:{' '}
             {new Date().toLocaleDateString('es-ES', {
               year: 'numeric',
@@ -22,7 +22,7 @@ export function TerminosPage() {
         </div>
         <div className="space-y-6 px-6 py-6 text-sm text-gray-700">
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">1. Aceptación</h2>
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">1. Aceptación</h2>
             <p>
               El acceso y uso de LabCore LIS («el Servicio») implica la
               aceptación de estos términos de uso. Si no está de acuerdo, no
@@ -32,7 +32,7 @@ export function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               2. Uso del Servicio
             </h2>
             <p>
@@ -47,7 +47,7 @@ export function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               3. Datos y privacidad
             </h2>
             <p>
@@ -65,7 +65,7 @@ export function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
               4. Disponibilidad y modificaciones
             </h2>
             <p>
@@ -79,7 +79,7 @@ export function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">5. Contacto</h2>
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">5. Contacto</h2>
             <p>
               Para consultas sobre estos términos o sobre el Servicio puede
               contactar a{' '}

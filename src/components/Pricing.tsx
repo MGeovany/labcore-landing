@@ -11,7 +11,7 @@ const ANNUAL_DISCOUNT = 0.8 // 20% off
 const plans = [
   {
     icon: Zap,
-    iconClass: 'text-gray-400',
+    iconClass: 'text-cyan-500',
     name: 'Essentials',
     desc: 'La base para un mejor diagnóstico.',
     priceMonthly: 49,
@@ -43,7 +43,7 @@ const plans = [
   },
   {
     icon: Building2,
-    iconClass: 'text-gray-400',
+    iconClass: 'text-cyan-500',
     name: 'Total Wellness',
     desc: 'Escala ilimitada para redes de clínicas.',
     priceMonthly: 199,
@@ -77,7 +77,9 @@ export function Pricing() {
       <div className="absolute inset-0 bg-gradient-to-b from-cyan-50/50 to-white -z-10" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cyan-200/20 rounded-full blur-[100px] -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div
+        className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 font-body"
+      >
         <motion.div
           className="text-center mb-10 sm:mb-16"
           initial={{ opacity: 0, y: 16 }}
@@ -88,7 +90,7 @@ export function Pricing() {
           <span className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-2 block">
             Precios
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[family-name:var(--font-display)] text-gray-900 mb-6 sm:mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-gray-900 mb-6 sm:mb-8">
             Elige el plan
             <br className="hidden sm:block" />
             <span className="sm:inline"> que se adapte a tu laboratorio</span>
@@ -133,7 +135,7 @@ export function Pricing() {
                 className="flex"
               >
                 <Card
-                  className={`flex flex-col w-full p-6 sm:p-8 ${plan.popular ? 'ring-2 ring-cyan-500/20 relative' : ''}`}
+                  className={`flex flex-col w-full p-6 sm:p-8 transition-all duration-200 hover:-translate-y-1 hover:ring-2 hover:ring-cyan-500/25 ${plan.popular ? 'ring-2 ring-cyan-500/20 relative' : ''}`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full whitespace-nowrap">
@@ -144,7 +146,7 @@ export function Pricing() {
                     <plan.icon
                       className={`w-5 h-5 flex-shrink-0 ${plan.iconClass}`}
                     />
-                    <h3 className="font-bold text-gray-900">{plan.name}</h3>
+                    <h3 className="font-medium text-xl text-gray-900 font-body">{plan.name}</h3>
                   </div>
                   <p className="text-sm text-gray-500 mb-4 sm:mb-6">
                     {plan.desc}

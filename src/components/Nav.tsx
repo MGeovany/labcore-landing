@@ -53,7 +53,7 @@ export function Nav() {
             width={24}
             height={24}
           />
-          <span className="font-[family-name:var(--font-body)] font-semibold text-lg sm:text-xl tracking-tight text-gray-900 group-hover:text-cyan-600 transition-colors">
+          <span className="font-body font-semibold text-lg sm:text-xl tracking-tight text-gray-900 group-hover:text-cyan-600 transition-colors">
             LabCore
           </span>
         </Link>

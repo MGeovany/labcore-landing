@@ -42,20 +42,17 @@ export function HowItWorks() {
           transition={{ duration: 0.5 }}
         >
           <p
-            className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-cyan-500 mb-3"
-            style={{ fontFamily: 'var(--font-body)' }}
+            className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-cyan-500 mb-3 font-body"
           >
             El proceso
           </p>
           <h2
-            className="text-4xl md:text-5xl text-gray-900 mb-4"
-            style={{ fontFamily: 'var(--font-body)' }}
+            className="text-4xl md:text-5xl text-gray-900 mb-4 font-body"
           >
             Control End-to-End
           </h2>
           <p
-            className="text-sm text-gray-500 max-w-xl mx-auto"
-            style={{ fontFamily: 'var(--font-body)' }}
+            className="text-sm text-gray-500 max-w-xl mx-auto font-body"
           >
             Origen de la orden, muestras, procesamiento técnico y validación hasta el reporte.
           </p>
@@ -86,8 +83,7 @@ export function HowItWorks() {
                 />
               </div>
               <h3
-                className="mb-3 text-2xl font-medium text-gray-900 transition-colors duration-300 group-hover:text-cyan-600"
-                style={{ fontFamily: 'var(--font-body)' }}
+                className="mb-3 text-2xl font-medium text-gray-900 transition-colors duration-300 group-hover:text-cyan-600 font-body"
               >
                 {step.num}. {step.title}
               </h3>

@@ -26,6 +26,24 @@ const items = [
     answer:
       'No. LabCore es software para el laboratorio. Puedes usarlo para gestionar órdenes, muestras y resultados con o sin módulos de facturación a seguros.',
   },
+  {
+    id: 5,
+    question: '¿Puedo enviar los resultados a los pacientes por correo o WhatsApp?',
+    answer:
+      'Sí. Puedes enviar el reporte al paciente por correo electrónico o por WhatsApp. El PDF se genera con la plantilla del laboratorio (membrete, logo, datos del laboratorio) cumpliendo el estándar de informes de laboratorio y la normativa vigente aplicable a tu jurisdicción.',
+  },
+  {
+    id: 6,
+    question: '¿Puedo probar LabCore antes de contratar?',
+    answer:
+      'Sí. Solicita una demo y te mostramos el flujo completo: recepción, muestras, procesamiento y validación. Sin compromiso.',
+  },
+  {
+    id: 7,
+    question: '¿Qué pasa si supero el límite de análisis de mi plan?',
+    answer:
+      'Los excedentes se facturan según tu contrato (por ejemplo, USD 0,05 por prueba). Para más de 20.000 análisis al mes, contacta a ventas para precios por volumen.',
+  },
 ]
 
 export function FAQ() {
