@@ -93,13 +93,22 @@ export function Roles() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-sm font-semibold uppercase tracking-wider text-cyan-500">
+          <p
+            className="text-sm font-semibold uppercase tracking-wider text-cyan-500"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
             Pensado para cada rol
           </p>
-          <h2 className="mt-3 text-2xl font-[family-name:var(--font-display)] font-bold tracking-tight text-gray-900 md:text-3xl">
+          <h2
+            className="text-4xl md:text-5xl text-gray-900 mb-4"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
             Qué hace cada rol en LabCore
           </h2>
-          <p className="mt-3 text-base text-gray-500">
+          <p
+            className="mt-3 text-base text-gray-500"
+            style={{ fontFamily: 'var(--font-body)' }}
+          >
             Flujos de trabajo adaptados a cada miembro de tu equipo de
             laboratorio.
           </p>
@@ -107,7 +116,7 @@ export function Roles() {
 
         {/* Role tabs */}
         <div className="mt-12">
-          <div className="mx-auto flex max-w-xl flex-wrap justify-center gap-1 rounded-xl bg-gray-100/80 p-1.5">
+          <div className="mx-auto flex w-fit flex-wrap justify-center gap-1 rounded-xl bg-gray-100/80 p-1.5">
             {roles.map((role) => (
               <button
                 key={role.value}
@@ -116,7 +125,7 @@ export function Roles() {
                 className={
                   'flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200 ' +
                   (activeRole === role.value
-                    ? 'bg-white text-cyan-500 shadow-sm whitespace-nowrap'
+                    ? 'bg-white text-cyan-500 whitespace-nowrap'
                     : 'text-gray-600 hover:text-gray-900')
                 }
               >
@@ -136,11 +145,12 @@ export function Roles() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="overflow-hidden rounded-xl border border-gray-100 p-8 shadow-sm md:p-10">
+                <Card className="overflow-hidden rounded-xl border border-gray-100 p-8 md:p-10">
                   <div className="grid gap-8 md:grid-cols-2">
                     {/* Left: description + outcomes */}
                     <div>
-                      <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
+                      <h3 className="text-xl font-medium text-gray-900"
+                        style={{ fontFamily: 'var(--font-body)' }}>
                         {currentRole.title}
                       </h3>
                       <p className="mt-3 leading-relaxed text-gray-500">
@@ -166,7 +176,7 @@ export function Roles() {
                     {/* Right: tasks */}
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                        What they do in LabCore
+                          Qué hace cada rol en LabCore
                       </p>
                       <ul className="mt-4 flex flex-col gap-3">
                         {currentRole.tasks.map((task, i) => (

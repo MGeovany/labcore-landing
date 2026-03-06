@@ -27,7 +27,7 @@ export function CTA() {
             <Link to="/demo">
               <Button
                 variant="secondary"
-                className="shadow-lg !py-3.5 !px-8 text-base"
+                className="!py-3.5 !px-8 text-base"
               >
                 Solicitar demo
               </Button>

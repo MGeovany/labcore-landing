@@ -81,12 +81,6 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <a
-            href="mailto:marlon.castro@thefndrs.com"
-            className="hidden md:block text-sm font-medium text-gray-600 hover:text-cyan-500"
-          >
-            Contacto
-          </a>
           <Link to="/demo" className="hidden sm:block">
             <Button className="!py-2.5 !px-5 sm:!px-6 text-sm">
               Solicitar demo
@@ -111,7 +105,7 @@ export function Nav() {
       {/* Mobile menu */}
       <div
         className={
-          'md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg transition-all duration-200 overflow-hidden ' +
+          'md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 transition-all duration-200 overflow-hidden ' +
           (mobileOpen
             ? 'max-h-[80vh] opacity-100'
             : 'max-h-0 opacity-0 pointer-events-none')

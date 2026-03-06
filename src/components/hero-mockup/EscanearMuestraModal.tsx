@@ -30,7 +30,7 @@ export function EscanearMuestraModal({ open, onOpenChange }: EscanearMuestraModa
       onClick={() => onOpenChange(false)}
     >
       <div
-        className="bg-white rounded-xl shadow-xl border border-gray-100 max-w-md w-full p-6"
+        className="bg-white rounded-xl border border-gray-100 max-w-md w-full p-6"
         onClick={(e) => e.stopPropagation()}
       >
         <h3

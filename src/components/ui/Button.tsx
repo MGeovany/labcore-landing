@@ -5,7 +5,7 @@ const base =
 
 const variants = {
   primary:
-    'bg-cyan-500 text-white py-3 px-8 shadow-[0_4px_6px_-1px_rgba(6,182,212,0.25)] hover:bg-cyan-600 hover:-translate-y-px hover:shadow-[0_10px_15px_-3px_rgba(6,182,212,0.35)]',
+    'bg-cyan-500 text-white py-3 px-8 hover:bg-cyan-600 hover:-translate-y-px',
   secondary:
     'bg-white text-[#111827] border border-[#e5e7eb] py-3 px-8 hover:border-cyan-500 hover:text-cyan-500',
 }

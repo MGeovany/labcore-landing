@@ -18,7 +18,7 @@ export function DashboardMockup() {
   const [scanModalOpen, setScanModalOpen] = useState(false)
 
   return (
-    <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+    <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-100 overflow-hidden">
       <EscanearMuestraModal open={scanModalOpen} onOpenChange={setScanModalOpen} />
       <div className="h-9 sm:h-10 bg-gray-50 border-b border-gray-200 flex items-center px-3 sm:px-4 gap-2">
         <div className="flex gap-1.5" aria-hidden>

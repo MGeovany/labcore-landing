@@ -34,7 +34,7 @@ export function TogglePill<T extends string>({
       ))}
       <motion.span
         layoutId="pricing-toggle-pill"
-        className="absolute z-0 rounded-full bg-white shadow-[0_2px_4px_rgba(0,0,0,0.05)]"
+        className="absolute z-0 rounded-full bg-white"
         initial={false}
         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
         style={{

@@ -6,7 +6,7 @@ const SUPPORT_EMAIL = 'marlon.castro@thefndrs.com'
 export function TerminosPage() {
   return (
     <LegalLayout title="Términos de uso">
-      <article className="rounded-xl border border-gray-200 bg-white shadow-none overflow-hidden">
+      <article className="rounded-xl border border-gray-200 bg-white overflow-hidden">
         <div className="border-b border-gray-100 px-6 py-5">
           <h1 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
             Términos de uso

@@ -41,7 +41,7 @@ export function DemoPage() {
         </p>
 
         {CALENDLY_URL ? (
-          <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white">
             <iframe
               title="Calendly - Solicitar demo"
               src={CALENDLY_URL}

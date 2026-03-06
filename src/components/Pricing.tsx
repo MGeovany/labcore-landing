@@ -91,7 +91,7 @@ export function Pricing() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[family-name:var(--font-display)] text-gray-900 mb-6 sm:mb-8">
             Elige el plan
             <br className="hidden sm:block" />
-            <span className="sm:inline"> que se adapte a tu lab</span>
+            <span className="sm:inline"> que se adapte a tu laboratorio</span>
           </h2>
 
           <TogglePill
