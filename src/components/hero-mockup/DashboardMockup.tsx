@@ -6,6 +6,7 @@ import { SampleQueueTable } from './SampleQueueTable'
 import { OrdenesView } from './OrdenesView'
 import { PacientesView } from './PacientesView'
 import { ResultadosView } from './ResultadosView'
+import { EscanearMuestraModal } from './EscanearMuestraModal'
 import {
   MOCKUP_NAV_ITEMS,
   SAMPLE_QUEUE_ROWS,
@@ -14,9 +15,11 @@ import {
 /** Composes the browser-style dashboard mockup for the Hero. Sidebar switches content inside the mockup. */
 export function DashboardMockup() {
   const [activeView, setActiveView] = useState<MockupViewId>('panel')
+  const [scanModalOpen, setScanModalOpen] = useState(false)
 
   return (
     <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+      <EscanearMuestraModal open={scanModalOpen} onOpenChange={setScanModalOpen} />
       <div className="h-9 sm:h-10 bg-gray-50 border-b border-gray-200 flex items-center px-3 sm:px-4 gap-2">
         <div className="flex gap-1.5" aria-hidden>
           <div className="w-3 h-3 rounded-full bg-red-400" />
@@ -42,6 +45,7 @@ export function DashboardMockup() {
               title="Cola de muestras"
               subtitle="Hoy: 142 muestras"
               actionLabel="Escanear muestra"
+              onActionClick={() => setScanModalOpen(true)}
             />
             <SampleQueueTable rows={SAMPLE_QUEUE_ROWS} />
           </div>
