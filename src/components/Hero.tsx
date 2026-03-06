@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import { Button } from './ui/Button'
+import { DashboardMockup } from './hero-mockup'
 import { staggerContainer, staggerItem } from '../lib/motion'
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const
@@ -107,131 +108,7 @@ export function Hero() {
           transition={mockupTransition}
         >
           <div className="absolute inset-0 bg-cyan-500/5 blur-3xl rounded-full transform scale-90 translate-y-12 -z-10" />
-          <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-            <div className="h-9 sm:h-10 bg-gray-50 border-b border-gray-200 flex items-center px-3 sm:px-4 gap-2">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <div className="w-3 h-3 rounded-full bg-amber-400" />
-                <div className="w-3 h-3 rounded-full bg-green-400" />
-              </div>
-              <div className="flex-1 text-center">
-                <div className="bg-white rounded-md border border-gray-200 w-64 mx-auto h-6 flex items-center justify-center text-[10px] text-gray-400">
-                  app.labcore.io/dashboard
-                </div>
-              </div>
-            </div>
-
-            <div className="p-4 sm:p-6 lg:p-8 bg-white grid grid-cols-12 gap-4 sm:gap-6 min-h-[320px] sm:min-h-[400px]">
-              <div className="hidden md:block col-span-2 space-y-4">
-                <div className="h-8 w-24 bg-gray-100 rounded mb-8" />
-                <div className="space-y-2">
-                  <div className="h-8 w-full bg-cyan-50 text-cyan-500 rounded flex items-center px-3 text-xs font-medium">
-                    Panel
-                  </div>
-                  <div className="h-8 w-full hover:bg-gray-50 rounded flex items-center px-3 text-xs text-gray-500">
-                    Órdenes
-                  </div>
-                  <div className="h-8 w-full hover:bg-gray-50 rounded flex items-center px-3 text-xs text-gray-500">
-                    Pacientes
-                  </div>
-                  <div className="h-8 w-full hover:bg-gray-50 rounded flex items-center px-3 text-xs text-gray-500">
-                    Resultados
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-span-12 md:col-span-10">
-                <div className="flex justify-between items-center mb-8">
-                  <div>
-                    <h3 className="font-[family-name:var(--font-display)] text-xl font-medium">
-                      Cola de muestras
-                    </h3>
-                    <p className="text-xs text-gray-400">Hoy: 142 muestras</p>
-                  </div>
-                  <div className="h-8 w-24 bg-cyan-500 rounded-full" />
-                </div>
-
-                <div className="overflow-x-auto rounded-lg sm:rounded-xl border border-gray-100 bg-white -mx-1 sm:mx-0">
-                  <table className="w-full min-w-[480px] caption-bottom text-sm">
-                    <thead>
-                      <tr className="border-b border-gray-100 hover:bg-transparent">
-                        <th className="h-12 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                          ID
-                        </th>
-                        <th className="h-12 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                          Paciente
-                        </th>
-                        <th className="h-12 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                          Prueba
-                        </th>
-                        <th className="h-12 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                          Estado
-                        </th>
-                        <th className="h-12 px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-gray-500">
-                          Acción
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        {
-                          id: '#LAB-092',
-                          patient: 'María González',
-                          test: 'Hemograma, Perfil lipídico',
-                          status: 'En proceso',
-                          statusClass: 'bg-amber-100 text-amber-700',
-                          action: 'Revisar',
-                        },
-                        {
-                          id: '#LAB-093',
-                          patient: 'Carlos Ruiz',
-                          test: 'TSH, T4 libre',
-                          status: 'Completado',
-                          statusClass: 'bg-emerald-100 text-emerald-700',
-                          action: 'Imprimir',
-                        },
-                        {
-                          id: '#LAB-094',
-                          patient: 'Elena Torres',
-                          test: 'Prueba tolerancia glucosa',
-                          status: 'Pendiente',
-                          statusClass: 'bg-blue-100 text-blue-700',
-                          action: 'Validar',
-                        },
-                      ].map((row) => (
-                        <tr
-                          key={row.id}
-                          className="border-b border-gray-100 transition-colors hover:bg-gray-50/70 last:border-0"
-                        >
-                          <td className="px-6 py-4 font-mono text-sm font-semibold text-gray-500">
-                            {row.id}
-                          </td>
-                          <td className="px-6 py-4 text-sm font-semibold text-gray-900">
-                            {row.patient}
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-500">
-                            {row.test}
-                          </td>
-                          <td className="px-6 py-4">
-                            <span
-                              className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${row.statusClass}`}
-                            >
-                              {row.status}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 text-right">
-                            <span className="text-sm font-medium text-cyan-500 hover:text-cyan-600 cursor-pointer transition-colors">
-                              {row.action}
-                            </span>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+          <DashboardMockup />
         </motion.div>
       </div>
     </section>
