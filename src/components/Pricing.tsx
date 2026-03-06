@@ -16,7 +16,13 @@ const plans = [
     desc: 'La base para un mejor diagnóstico.',
     priceMonthly: 49,
     cta: 'Elegir plan',
-    features: ['5 usuarios', '1 sede', '1.500 análisis/mes', 'Reportes básicos', 'Soporte por email'],
+    features: [
+      '5 usuarios',
+      '1 sede',
+      '1.500 análisis/mes',
+      'Reportes básicos',
+      'Soporte por email',
+    ],
   },
   {
     icon: Activity,
@@ -30,8 +36,8 @@ const plans = [
       '**Todo lo de Essentials**',
       '15 usuarios',
       '5.000 análisis/mes',
-      'Interfaces con analizadores (ASTM)',
-      'Portal del paciente',
+      'Cola de muestras y validación',
+      'Auditoría por orden y muestra',
       'Soporte prioritario',
     ],
   },
@@ -46,7 +52,7 @@ const plans = [
       '**Todo lo de Pro**',
       'Usuarios ilimitados',
       'Gestión multi-sede',
-      'Acceso API personalizado',
+      'Analítica y reportes avanzados',
       'Gerente de cuenta dedicado',
     ],
   },
@@ -79,7 +85,9 @@ export function Pricing() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-2 block">Precios</span>
+          <span className="text-xs font-bold tracking-widest text-gray-400 uppercase mb-2 block">
+            Precios
+          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[family-name:var(--font-display)] text-gray-900 mb-6 sm:mb-8">
             Elige el plan
             <br className="hidden sm:block" />
@@ -91,7 +99,17 @@ export function Pricing() {
             onChange={setBilling}
             items={[
               { id: 'monthly', label: 'Mensual' },
-              { id: 'annual', label: <><span>Anual</span><span className="text-[10px] text-green-600 ml-1">-20%</span></> },
+              {
+                id: 'annual',
+                label: (
+                  <>
+                    <span>Anual</span>
+                    <span className="text-[10px] text-green-600 ml-1">
+                      -20%
+                    </span>
+                  </>
+                ),
+              },
             ]}
           />
         </motion.div>
@@ -104,24 +122,33 @@ export function Pricing() {
           variants={staggerContainer}
         >
           {plans.map((plan) => {
-            const price = billing === 'annual'
-              ? Math.round(plan.priceMonthly * ANNUAL_DISCOUNT)
-              : plan.priceMonthly
+            const price =
+              billing === 'annual'
+                ? Math.round(plan.priceMonthly * ANNUAL_DISCOUNT)
+                : plan.priceMonthly
             return (
-              <motion.div key={plan.name} variants={staggerItem} className="flex">
+              <motion.div
+                key={plan.name}
+                variants={staggerItem}
+                className="flex"
+              >
                 <Card
                   className={`flex flex-col w-full p-6 sm:p-8 ${plan.popular ? 'ring-2 ring-cyan-500/20 relative' : ''}`}
                 >
                   {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full whitespace-nowrap">
-                    Más popular
-                  </div>
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full whitespace-nowrap">
+                      Más popular
+                    </div>
                   )}
                   <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                    <plan.icon className={`w-5 h-5 flex-shrink-0 ${plan.iconClass}`} />
+                    <plan.icon
+                      className={`w-5 h-5 flex-shrink-0 ${plan.iconClass}`}
+                    />
                     <h3 className="font-bold text-gray-900">{plan.name}</h3>
                   </div>
-                  <p className="text-sm text-gray-500 mb-4 sm:mb-6">{plan.desc}</p>
+                  <p className="text-sm text-gray-500 mb-4 sm:mb-6">
+                    {plan.desc}
+                  </p>
                   <div className="flex flex-wrap items-baseline gap-1 mb-4 sm:mb-6">
                     <AnimatePresence mode="wait">
                       <motion.span
@@ -145,13 +172,18 @@ export function Pricing() {
                           transition={{ duration: 0.2 }}
                           className="w-full text-xs text-gray-400"
                         >
-                          {' '}facturado anualmente
+                          {' '}
+                          facturado anualmente
                         </motion.span>
                       )}
                     </AnimatePresence>
                   </div>
 
-                  <Button as="a" href="#" className="w-full block text-center mb-6 sm:mb-8 min-h-[44px] flex items-center justify-center">
+                  <Button
+                    as="a"
+                    href="#"
+                    className="w-full block text-center mb-6 sm:mb-8 min-h-[44px] flex items-center justify-center"
+                  >
                     {plan.cta}
                   </Button>
 
@@ -173,7 +205,8 @@ export function Pricing() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          ¿Más de 20.000 análisis? Contacta a ventas para precios por volumen. Excedentes a USD 0,05 por prueba.
+          ¿Más de 20.000 análisis? Contacta a ventas para precios por volumen.
+          Excedentes a USD 0,05 por prueba.
         </motion.p>
       </div>
     </section>

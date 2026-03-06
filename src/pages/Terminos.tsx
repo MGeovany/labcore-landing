@@ -24,53 +24,69 @@ export function TerminosPage() {
           <section>
             <h2 className="mb-2 font-semibold text-gray-900">1. Aceptación</h2>
             <p>
-              El acceso y uso de LabCore LIS («el Servicio») implica la aceptación de estos
-              términos de uso. Si no está de acuerdo, no utilice el Servicio. El Servicio se
-              ofrece como software como servicio (SaaS) para la gestión de información de
-              laboratorio.
+              El acceso y uso de LabCore LIS («el Servicio») implica la
+              aceptación de estos términos de uso. Si no está de acuerdo, no
+              utilice el Servicio. El Servicio se ofrece como software como
+              servicio (SaaS) para la gestión de información de laboratorio.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">2. Uso del Servicio</h2>
+            <h2 className="mb-2 font-semibold text-gray-900">
+              2. Uso del Servicio
+            </h2>
             <p>
-              El usuario se compromete a utilizar el Servicio de forma lícita, conforme a la
-              normativa aplicable y a las instrucciones proporcionadas. Es responsable de la
-              confidencialidad de sus credenciales y de toda la actividad que se realice bajo su
-              cuenta. El uso del Servicio para fines no autorizados o que puedan afectar a
-              terceros o al correcto funcionamiento del sistema queda prohibido.
+              El usuario se compromete a utilizar el Servicio de forma lícita,
+              conforme a la normativa aplicable y a las instrucciones
+              proporcionadas. Es responsable de la confidencialidad de sus
+              credenciales y de toda la actividad que se realice bajo su cuenta.
+              El uso del Servicio para fines no autorizados o que puedan afectar
+              a terceros o al correcto funcionamiento del sistema queda
+              prohibido.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">3. Datos y privacidad</h2>
+            <h2 className="mb-2 font-semibold text-gray-900">
+              3. Datos y privacidad
+            </h2>
             <p>
               El tratamiento de datos personales y de salud se rige por nuestra{' '}
-              <Link to="/privacidad" className="text-gray-900 underline hover:no-underline">
+              <Link
+                to="/privacidad"
+                className="text-gray-900 underline hover:no-underline"
+              >
                 Política de privacidad
               </Link>
-              . El cliente que contrata el Servicio es responsable del cumplimiento de la
-              normativa de protección de datos en relación con los datos que introduce en el
-              sistema.
+              . El cliente que contrata el Servicio es responsable del
+              cumplimiento de la normativa de protección de datos en relación
+              con los datos que introduce en el sistema.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900">4. Disponibilidad y modificaciones</h2>
+            <h2 className="mb-2 font-semibold text-gray-900">
+              4. Disponibilidad y modificaciones
+            </h2>
             <p>
-              Nos esforzamos por mantener el Servicio disponible, pero no garantizamos una
-              disponibilidad ininterrumpida. Nos reservamos el derecho de modificar, suspender o
-              interrumpir funciones del Servicio, previo aviso cuando sea razonable. Los términos
-              de uso pueden actualizarse; el uso continuado del Servicio tras la publicación de
-              cambios implica la aceptación de los mismos.
+              Nos esforzamos por mantener el Servicio disponible, pero no
+              garantizamos una disponibilidad ininterrumpida. Nos reservamos el
+              derecho de modificar, suspender o interrumpir funciones del
+              Servicio, previo aviso cuando sea razonable. Los términos de uso
+              pueden actualizarse; el uso continuado del Servicio tras la
+              publicación de cambios implica la aceptación de los mismos.
             </p>
           </section>
 
           <section>
             <h2 className="mb-2 font-semibold text-gray-900">5. Contacto</h2>
             <p>
-              Para consultas sobre estos términos o sobre el Servicio puede contactar a{' '}
-              <a href={`mailto:${SUPPORT_EMAIL}`} className="text-gray-900 underline hover:no-underline">
+              Para consultas sobre estos términos o sobre el Servicio puede
+              contactar a{' '}
+              <a
+                href={`mailto:${SUPPORT_EMAIL}`}
+                className="text-gray-900 underline hover:no-underline"
+              >
                 {SUPPORT_EMAIL}
               </a>
               .
@@ -84,7 +100,10 @@ export function TerminosPage() {
           Volver al inicio
         </Link>
         {' · '}
-        <Link to="/privacidad" className="text-cyan-500 hover:text-cyan-600 underline">
+        <Link
+          to="/privacidad"
+          className="text-cyan-500 hover:text-cyan-600 underline"
+        >
           Política de privacidad
         </Link>
       </p>

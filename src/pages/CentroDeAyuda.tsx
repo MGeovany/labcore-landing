@@ -25,12 +25,16 @@ export function CentroDeAyudaPage() {
             Centro de ayuda
           </h1>
           <p className="mt-1 text-sm text-gray-500">
-            Redacte su mensaje y se abrirá su cliente de correo para enviarlo a soporte.
+            Redacte su mensaje y se abrirá su cliente de correo para enviarlo a
+            soporte.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4 px-6 py-6">
           <div className="space-y-2">
-            <label htmlFor="centro-asunto" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="centro-asunto"
+              className="block text-sm font-medium text-gray-700"
+            >
               Asunto
             </label>
             <input
@@ -43,7 +47,10 @@ export function CentroDeAyudaPage() {
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="centro-mensaje" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="centro-mensaje"
+              className="block text-sm font-medium text-gray-700"
+            >
               Mensaje
             </label>
             <textarea
@@ -64,7 +71,10 @@ export function CentroDeAyudaPage() {
 
       <p className="mt-6 text-center text-sm text-gray-500">
         Si su correo no se abre, envíe su mensaje directamente a{' '}
-        <a href={`mailto:${SUPPORT_EMAIL}`} className="text-gray-700 underline hover:no-underline">
+        <a
+          href={`mailto:${SUPPORT_EMAIL}`}
+          className="text-gray-700 underline hover:no-underline"
+        >
           {SUPPORT_EMAIL}
         </a>
       </p>
@@ -74,11 +84,17 @@ export function CentroDeAyudaPage() {
           Volver al inicio
         </Link>
         {' · '}
-        <Link to="/privacidad" className="text-cyan-500 hover:text-cyan-600 underline">
+        <Link
+          to="/privacidad"
+          className="text-cyan-500 hover:text-cyan-600 underline"
+        >
           Privacidad
         </Link>
         {' · '}
-        <Link to="/terminos" className="text-cyan-500 hover:text-cyan-600 underline">
+        <Link
+          to="/terminos"
+          className="text-cyan-500 hover:text-cyan-600 underline"
+        >
           Términos
         </Link>
       </p>

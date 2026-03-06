@@ -19,7 +19,9 @@ export function CTA() {
             Lleva tu laboratorio al siguiente nivel
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-white/80">
-            Órdenes, muestras, resultados y validación — con trazabilidad completa. Solicita una demo y descubre cómo LabCore simplifica tu operación.
+            Órdenes, muestras, resultados y validación — con trazabilidad
+            completa. Solicita una demo y descubre cómo LabCore simplifica tu
+            operación.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link to="/demo">

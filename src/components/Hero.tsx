@@ -11,7 +11,10 @@ const mockupTransition = { duration: 0.7, delay: 0.3, ease: easeOutExpo }
 
 export function Hero() {
   return (
-    <section id="product" className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <section
+      id="product"
+      className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           className="text-center max-w-4xl mx-auto mb-16"
@@ -41,7 +44,8 @@ export function Hero() {
             transition={{ duration: 0.4, ease: easeOutExpo }}
             className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-1"
           >
-            Desde la recepción de órdenes hasta la validación: flujo completo del ciclo de vida de muestras con trazabilidad total. Pensado para diagnósticos modernos.
+            De recepción a validación: ciclo de vida de muestras con
+            trazabilidad total.
           </motion.p>
 
           <motion.div
@@ -51,7 +55,12 @@ export function Hero() {
             <Link to="/demo">
               <Button>Solicitar demo</Button>
             </Link>
-            <Button as="a" href="#pricing" variant="secondary" className="w-full sm:w-auto flex items-center justify-center gap-2">
+            <Button
+              as="a"
+              href="#pricing"
+              variant="secondary"
+              className="w-full sm:w-auto flex items-center justify-center gap-2"
+            >
               Ver precios
               <ArrowRight className="w-4 h-4" />
             </Button>
@@ -61,11 +70,25 @@ export function Hero() {
             variants={staggerItem}
             className="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm font-medium text-gray-500"
           >
-            {['Reduce errores hasta 40%'].map((text) => (
+            {[
+              'Reduce errores hasta 40%',
+              'Trazabilidad orden–muestra–resultado',
+              'Cola de muestras hasta validación',
+            ].map((text) => (
               <div key={text} className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 </div>
                 {text}
@@ -118,7 +141,9 @@ export function Hero() {
               <div className="col-span-12 md:col-span-10">
                 <div className="flex justify-between items-center mb-8">
                   <div>
-                    <h3 className="font-[family-name:var(--font-display)] text-xl font-medium">Cola de muestras</h3>
+                    <h3 className="font-[family-name:var(--font-display)] text-xl font-medium">
+                      Cola de muestras
+                    </h3>
                     <p className="text-xs text-gray-400">Hoy: 142 muestras</p>
                   </div>
                   <div className="h-8 w-24 bg-cyan-500 rounded-full" />
@@ -147,9 +172,30 @@ export function Hero() {
                     </thead>
                     <tbody>
                       {[
-                        { id: '#LAB-092', patient: 'María González', test: 'Hemograma, Perfil lipídico', status: 'En proceso', statusClass: 'bg-amber-100 text-amber-700', action: 'Revisar' },
-                        { id: '#LAB-093', patient: 'Carlos Ruiz', test: 'TSH, T4 libre', status: 'Completado', statusClass: 'bg-emerald-100 text-emerald-700', action: 'Imprimir' },
-                        { id: '#LAB-094', patient: 'Elena Torres', test: 'Prueba tolerancia glucosa', status: 'Pendiente', statusClass: 'bg-blue-100 text-blue-700', action: 'Validar' },
+                        {
+                          id: '#LAB-092',
+                          patient: 'María González',
+                          test: 'Hemograma, Perfil lipídico',
+                          status: 'En proceso',
+                          statusClass: 'bg-amber-100 text-amber-700',
+                          action: 'Revisar',
+                        },
+                        {
+                          id: '#LAB-093',
+                          patient: 'Carlos Ruiz',
+                          test: 'TSH, T4 libre',
+                          status: 'Completado',
+                          statusClass: 'bg-emerald-100 text-emerald-700',
+                          action: 'Imprimir',
+                        },
+                        {
+                          id: '#LAB-094',
+                          patient: 'Elena Torres',
+                          test: 'Prueba tolerancia glucosa',
+                          status: 'Pendiente',
+                          statusClass: 'bg-blue-100 text-blue-700',
+                          action: 'Validar',
+                        },
                       ].map((row) => (
                         <tr
                           key={row.id}
@@ -165,7 +211,9 @@ export function Hero() {
                             {row.test}
                           </td>
                           <td className="px-6 py-4">
-                            <span className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${row.statusClass}`}>
+                            <span
+                              className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${row.statusClass}`}
+                            >
                               {row.status}
                             </span>
                           </td>

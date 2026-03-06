@@ -19,5 +19,5 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/centro-de-ayuda" element={<CentroDeAyudaPage />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )

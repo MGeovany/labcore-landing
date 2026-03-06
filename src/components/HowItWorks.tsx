@@ -6,28 +6,28 @@ const steps = [
     num: 1,
     filled: true,
     title: 'Recepción de órdenes',
-    desc: 'Recepción registra al paciente por cédula o escaneo. El sistema verifica elegibilidad de seguro al instante.',
+    desc: 'Recepción crea la orden, registra al paciente y solicita las pruebas. El sistema genera las muestras y asigna códigos únicos.',
   },
   {
     num: 2,
     filled: false,
     borderBlue: true,
     title: 'Muestras y etiquetas',
-    desc: 'Códigos de barras únicos automáticos. Impresión de etiquetas en punto de toma. Cero errores de identificación.',
+    desc: 'Generación de códigos de barras por muestra. Impresión de etiquetas. Orden lista para laboratorio con trazabilidad.',
   },
   {
     num: 3,
     filled: false,
     borderBlue: false,
     title: 'Procesamiento',
-    desc: 'Los técnicos cargan resultados o los analizadores envían datos por interfaz HL7/ASTM.',
+    desc: 'Los técnicos ven la cola de muestras, marcan recibida/en proceso/completada y cargan resultados. Guardado de borrador y envío a validación.',
   },
   {
     num: 4,
     filled: false,
     borderBlue: false,
     title: 'Validación',
-    desc: 'Supervisores revisan valores marcados. Aprobación en un clic y envío de PDF al paciente por WhatsApp/Email.',
+    desc: 'Supervisores revisan resultados por orden, aprueban o rechazan. Auditoría completa por muestra y por acción.',
   },
 ]
 
@@ -46,7 +46,8 @@ export function HowItWorks() {
             Lógica del flujo
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Cadena de custodia digital desde la recepción hasta la entrega de resultados.
+            Cadena de custodia digital desde la recepción hasta la entrega de
+            resultados.
           </p>
         </motion.div>
 
@@ -78,7 +79,9 @@ export function HowItWorks() {
                 {step.num}
               </div>
               <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{step.desc}</p>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {step.desc}
+              </p>
             </motion.div>
           ))}
         </motion.div>

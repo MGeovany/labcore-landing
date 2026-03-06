@@ -4,27 +4,27 @@ import { motion, AnimatePresence } from 'motion/react'
 const items = [
   {
     id: 1,
-    question: '¿Cómo funcionan las consultas virtuales?',
+    question: '¿Los médicos pueden ver resultados validados?',
     answer:
-      'LabCore se integra con tus plataformas de telemedicina o funciona como visor independiente. Los médicos pueden ingresar para ver resultados justo después de la validación.',
+      'Sí. Los médicos tienen acceso a resultados ya validados desde su panel. El flujo orden–muestra–resultado queda trazado en el sistema.',
   },
   {
     id: 2,
     question: '¿Mis datos están seguros y son compatibles con normativas?',
     answer:
-      'Sí. Usamos cifrado AES-256 en reposo y en tránsito. Cumplimos con las leyes locales de protección de datos en LATAM y con estándares HIPAA.',
+      'Sí. Usamos cifrado en reposo y en tránsito. El diseño está alineado con buenas prácticas de protección de datos y normativa aplicable.',
   },
   {
     id: 3,
     question: '¿Puedo conectar mis analizadores?',
     answer:
-      'Sí. Los planes Pro y Enterprise incluyen nuestro módulo Middleware, con soporte para más de 400 analizadores vía HL7 y ASTM.',
+      'Estamos trabajando en integración con analizadores (HL7/ASTM). Hoy el MVP permite cargar resultados manualmente desde la cola de procesamiento con trazabilidad completa.',
   },
   {
     id: 4,
     question: '¿Necesito seguro para usar LabCore?',
     answer:
-      'No. LabCore es software para el laboratorio. Incluimos módulos para gestionar reclamaciones de seguros de tus pacientes.',
+      'No. LabCore es software para el laboratorio. Puedes usarlo para gestionar órdenes, muestras y resultados con o sin módulos de facturación a seguros.',
   },
 ]
 
@@ -72,8 +72,18 @@ export function FAQ() {
                   animate={{ rotate: active === item.id ? 45 : 0 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 24 }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16M4 12h16" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 4v16M4 12h16"
+                    />
                   </svg>
                 </motion.span>
               </motion.button>

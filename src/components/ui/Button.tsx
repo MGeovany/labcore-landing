@@ -5,9 +5,9 @@ const base =
 
 const variants = {
   primary:
-  'bg-cyan-500 text-white py-3 px-8 shadow-[0_4px_6px_-1px_rgba(6,182,212,0.25)] hover:bg-cyan-600 hover:-translate-y-px hover:shadow-[0_10px_15px_-3px_rgba(6,182,212,0.35)]',
+    'bg-cyan-500 text-white py-3 px-8 shadow-[0_4px_6px_-1px_rgba(6,182,212,0.25)] hover:bg-cyan-600 hover:-translate-y-px hover:shadow-[0_10px_15px_-3px_rgba(6,182,212,0.35)]',
   secondary:
-  'bg-white text-[#111827] border border-[#e5e7eb] py-3 px-8 hover:border-cyan-500 hover:text-cyan-500',
+    'bg-white text-[#111827] border border-[#e5e7eb] py-3 px-8 hover:border-cyan-500 hover:text-cyan-500',
 }
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -27,7 +27,8 @@ export function Button({
   children,
   ...props
 }: ButtonProps | LinkProps) {
-  const classes = `${base} ${variants[variant ?? 'primary']} ${className}`.trim()
+  const classes =
+    `${base} ${variants[variant ?? 'primary']} ${className}`.trim()
 
   if (as === 'a') {
     const { as: _a, ...anchorProps } = props as LinkProps
@@ -39,7 +40,11 @@ export function Button({
   }
 
   return (
-    <button type="button" className={classes} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}>
+    <button
+      type="button"
+      className={classes}
+      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
+    >
       {children}
     </button>
   )

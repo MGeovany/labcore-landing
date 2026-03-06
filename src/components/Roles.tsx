@@ -100,7 +100,8 @@ export function Roles() {
             Qué hace cada rol en LabCore
           </h2>
           <p className="mt-3 text-base text-gray-500">
-            Flujos de trabajo adaptados a cada miembro de tu equipo de laboratorio.
+            Flujos de trabajo adaptados a cada miembro de tu equipo de
+            laboratorio.
           </p>
         </motion.div>
 
@@ -136,55 +137,55 @@ export function Roles() {
                 transition={{ duration: 0.3 }}
               >
                 <Card className="overflow-hidden rounded-xl border border-gray-100 p-8 shadow-sm md:p-10">
-              <div className="grid gap-8 md:grid-cols-2">
-                {/* Left: description + outcomes */}
-                <div>
-                  <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
-                    {currentRole.title}
-                  </h3>
-                  <p className="mt-3 leading-relaxed text-gray-500">
-                    {currentRole.description}
-                  </p>
-                  <div className="mt-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-cyan-500">
-                    Resultados clave
-                  </p>
-                    <ul className="mt-3 flex flex-col gap-2">
-                      {currentRole.outcomes.map((outcome, i) => (
-                        <li
-                          key={i}
-                          className="flex items-start gap-2 text-sm text-gray-900"
-                        >
-                          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-cyan-500" />
-                          {outcome}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="grid gap-8 md:grid-cols-2">
+                    {/* Left: description + outcomes */}
+                    <div>
+                      <h3 className="text-xl font-[family-name:var(--font-display)] font-bold text-gray-900">
+                        {currentRole.title}
+                      </h3>
+                      <p className="mt-3 leading-relaxed text-gray-500">
+                        {currentRole.description}
+                      </p>
+                      <div className="mt-6">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-cyan-500">
+                          Resultados clave
+                        </p>
+                        <ul className="mt-3 flex flex-col gap-2">
+                          {currentRole.outcomes.map((outcome, i) => (
+                            <li
+                              key={i}
+                              className="flex items-start gap-2 text-sm text-gray-900"
+                            >
+                              <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-cyan-500" />
+                              {outcome}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    {/* Right: tasks */}
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+                        What they do in LabCore
+                      </p>
+                      <ul className="mt-4 flex flex-col gap-3">
+                        {currentRole.tasks.map((task, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-3 rounded-lg border border-gray-100 bg-gray-50/80 p-3.5"
+                          >
+                            <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-cyan-50 text-xs font-bold text-cyan-500">
+                              {i + 1}
+                            </span>
+                            <span className="text-sm leading-relaxed text-gray-900">
+                              {task}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                {/* Right: tasks */}
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-                    What they do in LabCore
-                  </p>
-                  <ul className="mt-4 flex flex-col gap-3">
-                    {currentRole.tasks.map((task, i) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-3 rounded-lg border border-gray-100 bg-gray-50/80 p-3.5"
-                      >
-                        <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-cyan-50 text-xs font-bold text-cyan-500">
-                          {i + 1}
-                        </span>
-                        <span className="text-sm leading-relaxed text-gray-900">
-                          {task}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </Card>
+                </Card>
               </motion.div>
             </AnimatePresence>
           </div>

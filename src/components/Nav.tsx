@@ -26,20 +26,34 @@ export function Nav() {
   useEffect(() => {
     if (mobileOpen) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = ''
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+    }
   }, [mobileOpen])
 
   return (
     <nav
       className={
         'fixed w-full z-50 border-b transition-all duration-300 ' +
-        (scrolled ? 'bg-white/90 backdrop-blur-md border-gray-100' : 'bg-white/90 backdrop-blur-md border-gray-100')
+        (scrolled
+          ? 'bg-white/90 backdrop-blur-md border-gray-100'
+          : 'bg-white/90 backdrop-blur-md border-gray-100')
       }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group cursor-pointer" onClick={() => setMobileOpen(false)}>
-          <img src="/images/logo-black.png" alt="LabCore" className="h-7 sm:h-8 w-auto" width={32} height={32} />
-          <span className="font-[family-name:var(--font-display)] font-semibold text-lg sm:text-xl tracking-tight text-gray-900 group-hover:text-cyan-600 transition-colors">
+        <Link
+          to="/"
+          className="flex items-center gap-2 group cursor-pointer"
+          onClick={() => setMobileOpen(false)}
+        >
+          <img
+            src="/images/logo-black.png"
+            alt="LabCore"
+            className="h-3 sm:h-6 w-auto"
+            width={24}
+            height={24}
+          />
+          <span className="font-[family-name:var(--font-body)] font-semibold text-lg sm:text-xl tracking-tight text-gray-900 group-hover:text-cyan-600 transition-colors">
             LabCore
           </span>
         </Link>
@@ -47,11 +61,19 @@ export function Nav() {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           {links.map(({ href, label }) =>
             isHome ? (
-              <a key={href} href={href} className="hover:text-cyan-500 transition-colors">
+              <a
+                key={href}
+                href={href}
+                className="hover:text-cyan-500 transition-colors"
+              >
                 {label}
               </a>
             ) : (
-              <Link key={href} to={`/#${href.slice(1)}`} className="hover:text-cyan-500 transition-colors">
+              <Link
+                key={href}
+                to={`/#${href.slice(1)}`}
+                className="hover:text-cyan-500 transition-colors"
+              >
                 {label}
               </Link>
             )
@@ -59,11 +81,16 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <a href="mailto:marlon.castro@thefndrs.com" className="hidden md:block text-sm font-medium text-gray-600 hover:text-cyan-500">
+          <a
+            href="mailto:marlon.castro@thefndrs.com"
+            className="hidden md:block text-sm font-medium text-gray-600 hover:text-cyan-500"
+          >
             Contacto
           </a>
           <Link to="/demo" className="hidden sm:block">
-            <Button className="!py-2.5 !px-5 sm:!px-6 text-sm">Solicitar demo</Button>
+            <Button className="!py-2.5 !px-5 sm:!px-6 text-sm">
+              Solicitar demo
+            </Button>
           </Link>
           <button
             type="button"
@@ -72,7 +99,11 @@ export function Nav() {
             aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -81,7 +112,9 @@ export function Nav() {
       <div
         className={
           'md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg transition-all duration-200 overflow-hidden ' +
-          (mobileOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0 pointer-events-none')
+          (mobileOpen
+            ? 'max-h-[80vh] opacity-100'
+            : 'max-h-0 opacity-0 pointer-events-none')
         }
       >
         <div className="px-4 py-4 space-y-1">
@@ -106,15 +139,14 @@ export function Nav() {
               </Link>
             )
           )}
-          <a
-            href="mailto:marlon.castro@thefndrs.com"
+          <Link
+            to="/demo"
             onClick={() => setMobileOpen(false)}
-            className="block py-3 px-3 rounded-lg text-gray-700 font-medium hover:bg-gray-50 hover:text-cyan-600 min-h-[44px] flex items-center"
+            className="block pt-2"
           >
-            Contacto
-          </a>
-          <Link to="/demo" onClick={() => setMobileOpen(false)} className="block pt-2">
-            <Button className="w-full !py-3 text-sm min-h-[44px]">Solicitar demo</Button>
+            <Button className="w-full !py-3 text-sm min-h-[44px]">
+              Solicitar demo
+            </Button>
           </Link>
         </div>
       </div>

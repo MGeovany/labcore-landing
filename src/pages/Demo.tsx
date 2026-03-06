@@ -13,8 +13,17 @@ export function DemoPage() {
     <div className="min-h-screen bg-gray-50">
       <header className="border-b border-gray-200 bg-white px-4 py-3">
         <div className="mx-auto flex max-w-4xl items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900">
-            <img src="/images/logo-black.png" alt="LabCore" className="h-6 w-auto" width={24} height={24} />
+          <Link
+            to="/"
+            className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+          >
+            <img
+              src="/images/logo-black.png"
+              alt="LabCore"
+              className="h-6 w-auto"
+              width={24}
+              height={24}
+            />
             LabCore
           </Link>
           <Link to="/">
@@ -44,8 +53,14 @@ export function DemoPage() {
           <div className="mt-8 rounded-xl border border-gray-200 bg-white p-8 text-center">
             <p className="text-gray-600">
               Para activar la agenda de demos, configura la variable de entorno{' '}
-              <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">VITE_CALENDLY_DEMO_URL</code> con tu enlace de Calendly
-              (ej. <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">https://calendly.com/tu-usuario/demo</code>).
+              <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">
+                VITE_CALENDLY_DEMO_URL
+              </code>{' '}
+              con tu enlace de Calendly (ej.{' '}
+              <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">
+                https://calendly.com/tu-usuario/demo
+              </code>
+              ).
             </p>
             <p className="mt-4 text-sm text-gray-500">
               Mientras tanto, puedes solicitar una demo por correo:
@@ -54,7 +69,9 @@ export function DemoPage() {
               href="mailto:marlon.castro@thefndrs.com?subject=Solicitud de demo - LabCore"
               className="mt-4 inline-block"
             >
-              <Button className="!py-3 !px-6">Contactar para agendar demo</Button>
+              <Button className="!py-3 !px-6">
+                Contactar para agendar demo
+              </Button>
             </a>
           </div>
         )}
@@ -64,7 +81,10 @@ export function DemoPage() {
             Volver al inicio
           </Link>
           {' · '}
-          <a href="mailto:marlon.castro@thefndrs.com" className="text-cyan-500 hover:text-cyan-600 underline">
+          <a
+            href="mailto:marlon.castro@thefndrs.com"
+            className="text-cyan-500 hover:text-cyan-600 underline"
+          >
             marlon.castro@thefndrs.com
           </a>
         </p>

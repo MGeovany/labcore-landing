@@ -7,7 +7,11 @@ type FadeInProps = {
   delay?: number
 }
 
-export default function FadeIn({ children, className = '', delay = 0 }: FadeInProps) {
+export default function FadeIn({
+  children,
+  className = '',
+  delay = 0,
+}: FadeInProps) {
   return (
     <motion.div
       className={className}

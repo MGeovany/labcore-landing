@@ -20,16 +20,25 @@ const icons = { soporte: [HelpCircle, Mail], legal: [Shield, Scale] } as const
 
 export function Footer() {
   return (
-    <footer className="mt-10 w-full shrink-0 border-t border-gray-200 bg-white" role="contentinfo">
+    <footer
+      className="mt-10 w-full shrink-0 border-t border-gray-200 bg-white"
+      role="contentinfo"
+    >
       <div className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[auto_1fr_1fr]">
           <div>
-            <p className="text-sm font-semibold tracking-tight text-gray-900">LabCore LIS</p>
-            <p className="mt-1 text-xs text-gray-500">Sistema de trazabilidad</p>
+            <p className="text-sm font-semibold tracking-tight text-gray-900">
+              LabCore LIS
+            </p>
+            <p className="mt-1 text-xs text-gray-500">
+              Sistema de trazabilidad
+            </p>
           </div>
 
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-gray-500">Soporte</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-gray-500">
+              Soporte
+            </p>
             <ul className="mt-2 space-y-1">
               {footerLinks.soporte.map((item, i) => {
                 const Icon = icons.soporte[i]
@@ -40,7 +49,10 @@ export function Footer() {
                         to={item.href}
                         className="inline-flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-gray-900"
                       >
-                        <Icon className="size-3.5 shrink-0 text-gray-400" aria-hidden />
+                        <Icon
+                          className="size-3.5 shrink-0 text-gray-400"
+                          aria-hidden
+                        />
                         {item.label}
                       </Link>
                     ) : (
@@ -48,7 +60,10 @@ export function Footer() {
                         href={item.href}
                         className="inline-flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-gray-900"
                       >
-                        <Icon className="size-3.5 shrink-0 text-gray-400" aria-hidden />
+                        <Icon
+                          className="size-3.5 shrink-0 text-gray-400"
+                          aria-hidden
+                        />
                         {item.label}
                       </a>
                     )}
@@ -59,7 +74,9 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-gray-500">Legal</p>
+            <p className="text-xs font-medium uppercase tracking-wider text-gray-500">
+              Legal
+            </p>
             <ul className="mt-2 space-y-1">
               {footerLinks.legal.map((item, i) => {
                 const Icon = icons.legal[i]
@@ -69,7 +86,10 @@ export function Footer() {
                       to={item.href}
                       className="inline-flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-gray-900"
                     >
-                      <Icon className="size-3.5 shrink-0 text-gray-400" aria-hidden />
+                      <Icon
+                        className="size-3.5 shrink-0 text-gray-400"
+                        aria-hidden
+                      />
                       {item.label}
                     </Link>
                   </li>

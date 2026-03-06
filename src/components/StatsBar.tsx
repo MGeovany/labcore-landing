@@ -30,7 +30,9 @@ export function StatsBar() {
         >
           {stats.map(({ value, label }) => (
             <motion.div key={label} variants={staggerItem}>
-              <div className="text-2xl sm:text-3xl font-[family-name:var(--font-display)] text-gray-900 mb-1">{value}</div>
+              <div className="text-2xl sm:text-3xl font-[family-name:var(--font-display)] text-gray-900 mb-1">
+                {value}
+              </div>
               <div className="text-xs sm:text-sm text-gray-500">{label}</div>
             </motion.div>
           ))}
