@@ -1,78 +1,79 @@
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
 import { UserRound, Microscope, ShieldCheck, Settings } from 'lucide-react'
 import { Card } from './ui/Card'
 
 const roles = [
   {
     value: 'reception',
-    label: 'Reception',
+    label: 'Recepción',
     icon: UserRound,
-    title: 'Front-desk intake, fast and error-free',
+    title: 'Recepción ágil y sin errores',
     description:
-      'Reception staff create orders, capture patient data, and generate barcoded specimens in seconds.',
+      'El personal de recepción crea órdenes, captura datos del paciente y genera muestras con código de barras en segundos.',
     tasks: [
-      'Create new orders with patient info, requested tests, and urgency',
-      'Auto-generate specimen IDs and print label PDFs',
-      'Scan barcodes to look up any order or specimen instantly',
-      'Track order status from creation to completion',
+      'Crear órdenes con datos del paciente, pruebas solicitadas y urgencia',
+      'Generar IDs de muestra y PDFs de etiquetas automáticamente',
+      'Escanear códigos para consultar cualquier orden o muestra al instante',
+      'Seguir el estado de la orden desde la creación hasta la entrega',
     ],
     outcomes: [
-      'Faster patient check-in with fewer data-entry errors',
-      'No more lost or misidentified samples',
+      'Check-in más rápido con menos errores de digitación',
+      'Cero muestras perdidas o mal identificadas',
     ],
   },
   {
     value: 'technician',
-    label: 'Technician',
+    label: 'Técnico',
     icon: Microscope,
-    title: 'A clear queue, from receipt to results',
+    title: 'Cola clara: desde recepción hasta resultados',
     description:
-      'Technicians process specimens through a structured queue — receive, analyze, enter results, and send to validation.',
+      'Los técnicos procesan muestras en una cola ordenada: recibir, analizar, cargar resultados y enviar a validación.',
     tasks: [
-      'View and manage the specimen processing queue',
-      'Mark specimens as received, in-progress, or complete',
-      'Enter results with built-in validation and draft saving',
-      'Flag incidents or anomalies for supervisor review',
+      'Ver y gestionar la cola de procesamiento de muestras',
+      'Marcar muestras como recibidas, en proceso o completadas',
+      'Cargar resultados con validación integrada y guardado de borradores',
+      'Marcar incidencias o anomalías para revisión del supervisor',
     ],
     outcomes: [
-      'Structured workflow eliminates guesswork and backtracking',
-      'Draft results mean no lost work between shifts',
+      'Flujo estructurado sin improvisar ni retroceder',
+      'Borradores evitan perder trabajo entre turnos',
     ],
   },
   {
     value: 'supervisor',
     label: 'Supervisor',
     icon: ShieldCheck,
-    title: 'Validate with confidence, audit with ease',
+    title: 'Valida con confianza, audita con facilidad',
     description:
-      'Supervisors review consolidated results per order and validate, reject, or request re-runs with full traceability.',
+      'Los supervisores revisan resultados consolidados por orden y validan, rechazan o piden repeticiones con trazabilidad completa.',
     tasks: [
-      'Review all results grouped by order for efficient validation',
-      'Approve, reject, or request re-runs on individual results',
-      'Access the full audit timeline for any specimen or order',
-      'Search and filter audit records by date, user, or action',
+      'Revisar todos los resultados agrupados por orden para validar rápido',
+      'Aprobar, rechazar o solicitar repetición por resultado',
+      'Acceder al historial de auditoría de cualquier muestra u orden',
+      'Buscar y filtrar registros por fecha, usuario o acción',
     ],
     outcomes: [
-      'Consolidated view reduces review time by half',
-      'Complete audit trail for regulatory compliance',
+      'Vista consolidada reduce el tiempo de revisión a la mitad',
+      'Trazabilidad completa para cumplimiento normativo',
     ],
   },
   {
     value: 'admin',
     label: 'Admin',
     icon: Settings,
-    title: 'Full control across all sites',
+    title: 'Control total en todas las sedes',
     description:
-      'Available on Enterprise. Administrators manage users, configure multi-site settings, and oversee analytics across the organization.',
+      'Disponible en Enterprise. Los administradores gestionan usuarios, configuran multi-sede y supervisan analíticas de la organización.',
     tasks: [
-      'Admin dashboard for user and site management',
-      'Seed or demo data for training and onboarding',
-      'Analytics dashboards with KPIs and performance charts',
-      'Priority support and custom configuration options',
+      'Panel de administración de usuarios y sedes',
+      'Datos de prueba o demo para capacitación',
+      'Dashboards con KPIs y gráficos de desempeño',
+      'Soporte prioritario y opciones de configuración',
     ],
     outcomes: [
-      'Centralized control over labs and collection points',
-      'Data-driven decisions with real-time analytics',
+      'Control centralizado de labs y puntos de toma',
+      'Decisiones basadas en datos con analíticas en tiempo real',
     ],
   },
 ]
@@ -83,19 +84,25 @@ export function Roles() {
 
   return (
     <section className="border-t border-gray-100 bg-gray-50/60 py-20 md:py-28">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section header */}
-        <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-            Built for every role
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.5 }}
+        >
+          <p className="text-sm font-semibold uppercase tracking-wider text-cyan-500">
+            Pensado para cada rol
           </p>
           <h2 className="mt-3 text-2xl font-[family-name:var(--font-display)] font-bold tracking-tight text-gray-900 md:text-3xl">
-            What each role gets in LabCore
+            Qué hace cada rol en LabCore
           </h2>
           <p className="mt-3 text-base text-gray-500">
-            Tailored workflows for every member of your laboratory team.
+            Flujos de trabajo adaptados a cada miembro de tu equipo de laboratorio.
           </p>
-        </div>
+        </motion.div>
 
         {/* Role tabs */}
         <div className="mt-12">
@@ -108,7 +115,7 @@ export function Roles() {
                 className={
                   'flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm font-medium transition-all duration-200 ' +
                   (activeRole === role.value
-                    ? 'bg-white text-blue-600 shadow-sm'
+                    ? 'bg-white text-cyan-500 shadow-sm whitespace-nowrap'
                     : 'text-gray-600 hover:text-gray-900')
                 }
               >
@@ -120,7 +127,15 @@ export function Roles() {
 
           {/* Tab content */}
           <div className="mt-8">
-            <Card className="overflow-hidden rounded-xl border border-gray-100 p-8 shadow-sm md:p-10">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeRole}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Card className="overflow-hidden rounded-xl border border-gray-100 p-8 shadow-sm md:p-10">
               <div className="grid gap-8 md:grid-cols-2">
                 {/* Left: description + outcomes */}
                 <div>
@@ -131,16 +146,16 @@ export function Roles() {
                     {currentRole.description}
                   </p>
                   <div className="mt-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-                      Key outcomes
-                    </p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-cyan-500">
+                    Resultados clave
+                  </p>
                     <ul className="mt-3 flex flex-col gap-2">
                       {currentRole.outcomes.map((outcome, i) => (
                         <li
                           key={i}
                           className="flex items-start gap-2 text-sm text-gray-900"
                         >
-                          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-blue-600" />
+                          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-cyan-500" />
                           {outcome}
                         </li>
                       ))}
@@ -158,7 +173,7 @@ export function Roles() {
                         key={i}
                         className="flex items-start gap-3 rounded-lg border border-gray-100 bg-gray-50/80 p-3.5"
                       >
-                        <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-blue-50 text-xs font-bold text-blue-600">
+                        <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-cyan-50 text-xs font-bold text-cyan-500">
                           {i + 1}
                         </span>
                         <span className="text-sm leading-relaxed text-gray-900">
@@ -170,6 +185,8 @@ export function Roles() {
                 </div>
               </div>
             </Card>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>

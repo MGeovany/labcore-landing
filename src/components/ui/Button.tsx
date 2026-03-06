@@ -5,9 +5,9 @@ const base =
 
 const variants = {
   primary:
-  'bg-[#2b59c3] text-white py-3 px-8 shadow-[0_4px_6px_-1px_rgba(43,89,195,0.2)] hover:bg-[#1e40a0] hover:-translate-y-px hover:shadow-[0_10px_15px_-3px_rgba(43,89,195,0.3)]',
+  'bg-cyan-500 text-white py-3 px-8 shadow-[0_4px_6px_-1px_rgba(6,182,212,0.25)] hover:bg-cyan-600 hover:-translate-y-px hover:shadow-[0_10px_15px_-3px_rgba(6,182,212,0.35)]',
   secondary:
-  'bg-white text-[#111827] border border-[#e5e7eb] py-3 px-8 hover:border-[#2b59c3] hover:text-[#2b59c3]',
+  'bg-white text-[#111827] border border-[#e5e7eb] py-3 px-8 hover:border-cyan-500 hover:text-cyan-500',
 }
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
