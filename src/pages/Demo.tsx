@@ -1,33 +1,33 @@
 import { Link } from 'react-router-dom'
 import { Button } from '../components/ui/Button'
-
-/**
- * Calendly "Request a demo": set in .env
- *   VITE_CALENDLY_DEMO_URL=https://calendly.com/tu-usuario/demo
- * No API key needed — only the Calendly event/scheduling URL.
- */
-const CALENDLY_URL = import.meta.env.VITE_CALENDLY_DEMO_URL ?? ''
+import { useDemoModal } from '../context/DemoModalContext'
 
 export function DemoPage() {
+  const { openDemoModal } = useDemoModal()
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <header className="border-b border-gray-200 bg-white px-4 py-3">
-        <div className="mx-auto flex max-w-4xl items-center justify-between">
+      <header className="border-b border-gray-100 bg-white/90 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
           <Link
             to="/"
-            className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+            className="flex items-center gap-2 group cursor-pointer"
           >
             <img
               src="/images/logo-black.png"
               alt="LabCore"
-              className="h-6 w-auto"
+              className="h-3 sm:h-6 w-auto"
               width={24}
               height={24}
             />
-            LabCore
+            <span className="font-body font-semibold text-lg sm:text-xl tracking-tight text-gray-900 group-hover:text-cyan-600 transition-colors">
+              LabCore
+            </span>
           </Link>
           <Link to="/">
-            <Button className="!py-2 !px-4 text-sm">Volver al inicio</Button>
+            <Button className="py-2.5! px-5 sm:px-6! text-sm font-medium font-body">
+              Volver al inicio
+            </Button>
           </Link>
         </div>
       </header>
@@ -40,53 +40,30 @@ export function DemoPage() {
           Elige un horario y te contactaremos para mostrarte LabCore.
         </p>
 
-        {CALENDLY_URL ? (
-          <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white">
-            <iframe
-              title="Calendly - Solicitar demo"
-              src={CALENDLY_URL}
-              className="h-[700px] w-full min-h-[600px] border-0"
-              allowFullScreen
-            />
-          </div>
-        ) : (
-          <div className="mt-8 rounded-xl border border-gray-200 bg-white p-8 text-center">
-            <p className="text-gray-600">
-              Para activar la agenda de demos, configura la variable de entorno{' '}
-              <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">
-                VITE_CALENDLY_DEMO_URL
-              </code>{' '}
-              con tu enlace de Calendly (ej.{' '}
-              <code className="rounded bg-gray-100 px-1.5 py-0.5 text-sm">
-                https://calendly.com/tu-usuario/demo
-              </code>
-              ).
-            </p>
-            <p className="mt-4 text-sm text-gray-500">
-              Mientras tanto, puedes solicitar una demo por correo:
-            </p>
-            <a
-              href="mailto:marlon.castro@thefndrs.com?subject=Solicitud de demo - LabCore"
-              className="mt-4 inline-block"
-            >
-              <Button className="!py-3 !px-6">
-                Contactar para agendar demo
-              </Button>
-            </a>
-          </div>
-        )}
+        <div className="mt-8">
+          <Button
+            type="button"
+            onClick={openDemoModal}
+            className="rounded-full px-8 py-3.5 text-base font-medium"
+          >
+            Abrir agenda y elegir horario
+          </Button>
+        </div>
+
+        <p className="mt-8 text-sm text-gray-500">
+          Si prefieres, escríbenos:{' '}
+          <a
+            href="mailto:marlon.castro@thefndrs.com?subject=Solicitud de demo - LabCore"
+            className="text-cyan-500 hover:text-cyan-600 underline"
+          >
+            marlon.castro@thefndrs.com
+          </a>
+        </p>
 
         <p className="mt-6 text-center text-sm text-gray-500">
           <Link to="/" className="text-cyan-500 hover:text-cyan-600 underline">
             Volver al inicio
           </Link>
-          {' · '}
-          <a
-            href="mailto:marlon.castro@thefndrs.com"
-            className="text-cyan-500 hover:text-cyan-600 underline"
-          >
-            marlon.castro@thefndrs.com
-          </a>
         </p>
       </main>
     </div>

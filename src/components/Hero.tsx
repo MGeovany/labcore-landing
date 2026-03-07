@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import { Button } from './ui/Button'
 import { DashboardMockup } from './hero-mockup'
 import { staggerContainer, staggerItem } from '../lib/motion'
+import { Link } from 'react-router-dom'
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const
 const badgeTransition = { duration: 0.5, ease: easeOutExpo }

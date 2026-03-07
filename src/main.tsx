@@ -7,10 +7,12 @@ import { DemoPage } from './pages/Demo'
 import { PrivacidadPage } from './pages/Privacidad'
 import { TerminosPage } from './pages/Terminos'
 import { CentroDeAyudaPage } from './pages/CentroDeAyuda'
+import { DemoModalProvider } from './context/DemoModalContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <DemoModalProvider>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/demo" element={<DemoPage />} />
@@ -18,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/terminos" element={<TerminosPage />} />
         <Route path="/centro-de-ayuda" element={<CentroDeAyudaPage />} />
       </Routes>
+      </DemoModalProvider>
     </BrowserRouter>
   </StrictMode>
 )
