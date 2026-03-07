@@ -53,15 +53,13 @@ export function FAQ() {
     <section id="faq" className="py-16 sm:py-24 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <motion.h2
-          className="text-2xl sm:text-3xl font-[family-name:var(--font-display)] text-gray-900 mb-10 sm:mb-12"
+          className="text-2xl sm:text-3xl font-body font-medium text-gray-900 mb-10 sm:mb-12"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
         >
-          Preguntas
-          <br />
-          frecuentes
+          Preguntas frecuentes
         </motion.h2>
 
         <div className="space-y-0">

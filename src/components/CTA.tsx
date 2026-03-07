@@ -10,10 +10,10 @@ export function CTA() {
     >
       <div className="absolute inset-0 -z-10 bg-white" />
       <div
-        className="absolute inset-0 -z-10 animate-gradient-flow opacity-80"
+        className="absolute inset-0 -z-10 animate-gradient-flow opacity-55"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 50%, rgb(34 211 238 / 0.5), rgb(165 243 252 / 0.25), transparent 70%)',
+            'radial-gradient(ellipse 80% 60% at 50% 50%, rgb(34 211 238 / 0.25), rgb(165 243 252 / 0.12), transparent 70%)',
           backgroundSize: '200% 200%',
         }}
       />
@@ -32,18 +32,11 @@ export function CTA() {
             LabCore.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
-            <Link to="/demo"
-            as="a"
-            href="mailto:marlon.castro@thefndrs.com?subject=Contacto ventas - LabCore"
-              >
-              <Button className="rounded-full px-8 py-3.5 text-base font-medium">
-              Contactar ventas
-
-              </Button>
-            </Link>
             <a
+              href="mailto:marlon.castro@thefndrs.com?subject=Contacto ventas - LabCore"
               className="text-base font-medium text-gray-600 underline decoration-gray-300 underline-offset-4 transition-colors hover:text-gray-900 hover:decoration-gray-500"
             >
+              Contactar ventas
             </a>
           </div>
         </motion.div>

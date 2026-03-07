@@ -33,7 +33,7 @@ export function DemoPage() {
       </header>
 
       <main className="mx-auto max-w-4xl px-4 py-8">
-        <h1 className="text-2xl font-[family-name:var(--font-display)] font-bold text-gray-900 md:text-3xl">
+        <h1 className="text-2xl font-body font-medium text-gray-900 md:text-3xl">
           Solicitar demo
         </h1>
         <p className="mt-2 text-gray-600">

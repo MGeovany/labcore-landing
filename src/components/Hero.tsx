@@ -16,6 +16,15 @@ export function Hero() {
       id="product"
       className="relative pt-24 sm:pt-32 pb-16 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
     >
+      <div className="absolute inset-0 -z-10 bg-white" />
+      <div
+        className="absolute inset-0 -z-10 animate-gradient-flow opacity-50"
+        style={{
+          background:
+            'radial-gradient(ellipse 100% 80% at 50% 35%, rgb(34 211 238 / 0.22), rgb(165 243 252 / 0.1), transparent 70%)',
+          backgroundSize: '200% 200%',
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
           className="text-center max-w-4xl mx-auto mb-16"

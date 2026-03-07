@@ -82,7 +82,7 @@ export function Nav() {
 
         <div className="flex items-center gap-2 sm:gap-4">
           <Link to="/demo" className="hidden sm:block">
-            <Button className="!py-2.5 !px-5 sm:!px-6 text-sm">
+            <Button className="!py-2.5 !px-5 sm:!px-6 text-sm font-medium font-body">
               Solicitar demo
             </Button>
           </Link>
