@@ -21,35 +21,14 @@ If you run a clinic or lab in Honduras (Tegucigalpa, San Pedro Sula, La Ceiba, e
 ## Contact
 
 - Preferred: open a GitHub Issue with your clinic/lab name and what you want to integrate
-- Please do not include patient data (PHI) in Issues
 
 ## SEO keywords (for discoverability)
 
 LIS Honduras, sistema de informacion de laboratorio clinico, software para laboratorio clinico en Honduras, software para clinicas en Honduras, gestion de clinicas, gestion de laboratorio clinico, resultados de laboratorio en linea, integracion para clinicas, healthtech Honduras
 
-## Tech
-
-- React + TypeScript + Vite
-- Tailwind CSS
-
-## Local development
-
-```bash
-npm install
-npm run dev
-```
-
-Other commands:
-
-```bash
-npm run build
-npm run preview
-npm run lint
-```
-
 ## Copyright & License
 
-Copyright (c) 2026 TheFndrs.
+Copyright (c) 2026 THEFNDRS.
 
 All rights reserved. No license is granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell any portion of this repository without explicit written permission from the copyright holder.
 
