@@ -15,7 +15,11 @@ export function MockupSidebar({
   return (
     <div className="hidden md:block col-span-2 space-y-4">
       <div className="h-8 w-24 bg-gray-100 rounded mb-8" aria-hidden />
-      <nav className="space-y-2" role="navigation" aria-label="Panel de laboratorio">
+      <nav
+        className="space-y-2"
+        role="navigation"
+        aria-label="Panel de laboratorio"
+      >
         {items.map((item) => (
           <button
             key={item.id}

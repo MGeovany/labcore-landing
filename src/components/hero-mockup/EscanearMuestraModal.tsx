@@ -9,7 +9,10 @@ interface EscanearMuestraModalProps {
  * Modal que explica que el usuario puede escanear con la pistola
  * o ingresar códigos manualmente.
  */
-export function EscanearMuestraModal({ open, onOpenChange }: EscanearMuestraModalProps) {
+export function EscanearMuestraModal({
+  open,
+  onOpenChange,
+}: EscanearMuestraModalProps) {
   useEffect(() => {
     if (!open) return
     const onEscape = (e: KeyboardEvent) => {
@@ -40,9 +43,10 @@ export function EscanearMuestraModal({ open, onOpenChange }: EscanearMuestraModa
           Escanear muestra
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed mb-6">
-          Utilice el lector de códigos de barras para registrar la muestra de forma
-          automática o ingrese el identificador de la muestra manualmente en el
-          campo de búsqueda. Ambas opciones mantienen la trazabilidad del proceso.
+          Utilice el lector de códigos de barras para registrar la muestra de
+          forma automática o ingrese el identificador de la muestra manualmente
+          en el campo de búsqueda. Ambas opciones mantienen la trazabilidad del
+          proceso.
         </p>
         <div className="flex justify-end">
           <button

@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "ci": "pnpm run format:check && pnpm run lint && pnpm run build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -55,8 +55,8 @@ export function Hero() {
             className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-1 space-y-3"
           >
             <p>
-              Pensado para laboratorios que buscan menos errores, más control
-              y un flujo claro de principio a fin.
+              Pensado para laboratorios que buscan menos errores, más control y
+              un flujo claro de principio a fin.
             </p>
           </motion.div>
 

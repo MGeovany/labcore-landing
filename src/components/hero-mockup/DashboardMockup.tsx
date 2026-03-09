@@ -7,10 +7,7 @@ import { OrdenesView } from './OrdenesView'
 import { PacientesView } from './PacientesView'
 import { ResultadosView } from './ResultadosView'
 import { EscanearMuestraModal } from './EscanearMuestraModal'
-import {
-  MOCKUP_NAV_ITEMS,
-  SAMPLE_QUEUE_ROWS,
-} from './mockup-data'
+import { MOCKUP_NAV_ITEMS, SAMPLE_QUEUE_ROWS } from './mockup-data'
 
 /** Composes the browser-style dashboard mockup for the Hero. Sidebar switches content inside the mockup. */
 export function DashboardMockup() {
@@ -19,7 +16,10 @@ export function DashboardMockup() {
 
   return (
     <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-100 overflow-hidden">
-      <EscanearMuestraModal open={scanModalOpen} onOpenChange={setScanModalOpen} />
+      <EscanearMuestraModal
+        open={scanModalOpen}
+        onOpenChange={setScanModalOpen}
+      />
       <div className="h-9 sm:h-10 bg-gray-50 border-b border-gray-200 flex items-center px-3 sm:px-4 gap-2">
         <div className="flex gap-1.5" aria-hidden>
           <div className="w-3 h-3 rounded-full bg-red-400" />

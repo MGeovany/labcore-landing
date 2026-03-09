@@ -1,5 +1,10 @@
 import { motion } from 'motion/react'
-import { ClipboardList, Microscope,  MonitorCheck,  ScanQrCode } from 'lucide-react'
+import {
+  ClipboardList,
+  Microscope,
+  MonitorCheck,
+  ScanQrCode,
+} from 'lucide-react'
 import { staggerContainer, staggerItem } from '../lib/motion'
 
 // Textos alineados con docs/flujo-end-to-end-labcore.md (A: origen, B: técnico, C: validación)
@@ -41,20 +46,15 @@ export function HowItWorks() {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
         >
-          <p
-            className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-cyan-500 mb-3 font-body"
-          >
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-cyan-500 mb-3 font-body">
             El proceso
           </p>
-          <h2
-            className="text-4xl md:text-5xl text-gray-900 mb-4 font-body"
-          >
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4 font-body">
             Control End-to-End
           </h2>
-          <p
-            className="text-sm text-gray-500 max-w-xl mx-auto font-body"
-          >
-            Origen de la orden, muestras, procesamiento técnico y validación hasta el reporte.
+          <p className="text-sm text-gray-500 max-w-xl mx-auto font-body">
+            Origen de la orden, muestras, procesamiento técnico y validación
+            hasta el reporte.
           </p>
         </motion.div>
 
@@ -82,9 +82,7 @@ export function HowItWorks() {
                   strokeWidth={1.6}
                 />
               </div>
-              <h3
-                className="mb-3 text-2xl font-medium text-gray-900 transition-colors duration-300 group-hover:text-cyan-600 font-body"
-              >
+              <h3 className="mb-3 text-2xl font-medium text-gray-900 transition-colors duration-300 group-hover:text-cyan-600 font-body">
                 {step.num}. {step.title}
               </h3>
               <p className="max-w-[240px] text-sm leading-relaxed text-gray-500">

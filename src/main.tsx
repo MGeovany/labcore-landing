@@ -13,13 +13,13 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <DemoModalProvider>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/demo" element={<DemoPage />} />
-        <Route path="/privacidad" element={<PrivacidadPage />} />
-        <Route path="/terminos" element={<TerminosPage />} />
-        <Route path="/centro-de-ayuda" element={<CentroDeAyudaPage />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/demo" element={<DemoPage />} />
+          <Route path="/privacidad" element={<PrivacidadPage />} />
+          <Route path="/terminos" element={<TerminosPage />} />
+          <Route path="/centro-de-ayuda" element={<CentroDeAyudaPage />} />
+        </Routes>
       </DemoModalProvider>
     </BrowserRouter>
   </StrictMode>

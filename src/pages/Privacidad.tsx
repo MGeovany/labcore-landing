@@ -81,7 +81,9 @@ export function PrivacidadPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900 font-body">5. Derechos</h2>
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
+              5. Derechos
+            </h2>
             <p>
               Los interesados pueden ejercer los derechos de acceso,
               rectificación, supresión, limitación del tratamiento, portabilidad

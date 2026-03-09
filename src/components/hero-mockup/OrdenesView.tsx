@@ -39,7 +39,9 @@ export function OrdenesView() {
                 <td className="px-6 py-4 text-sm font-semibold text-gray-900">
                   {row.patient}
                 </td>
-                <td className="px-6 py-4 text-sm text-gray-500">{row.status}</td>
+                <td className="px-6 py-4 text-sm text-gray-500">
+                  {row.status}
+                </td>
                 <td className="px-6 py-4 text-right">
                   <span className="text-sm font-medium text-cyan-500 hover:text-cyan-600 cursor-pointer">
                     {row.action}

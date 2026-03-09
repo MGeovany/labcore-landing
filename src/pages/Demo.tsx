@@ -9,10 +9,7 @@ export function DemoPage() {
     <div className="min-h-screen bg-gray-50">
       <header className="border-b border-gray-100 bg-white/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-2 group cursor-pointer"
-          >
+          <Link to="/" className="flex items-center gap-2 group cursor-pointer">
             <img
               src="/images/logo-black.png"
               alt="LabCore"

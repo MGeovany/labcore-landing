@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
-import { Button } from './ui/Button'
 
 export function CTA() {
   return (

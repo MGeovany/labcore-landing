@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# LabCore (Landing) - LIS / Clinic Software for Honduras
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website: https://labcore.thefndrs.com
+Status: Under construction (MVP in progress)
 
-Currently, two official plugins are available:
+LabCore is an in-progress platform focused on Honduras for clinical laboratories and clinics (LIS + clinic ops). This repository contains the landing site and early UI work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+We are actively looking for:
 
-## React Compiler
+- Investors interested in healthtech in Honduras
+- Clinics / laboratories in Honduras that want to pilot or integrate LabCore
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## What LabCore aims to solve
 
-## Expanding the ESLint configuration
+- Faster patient intake and order capture (planned)
+- Centralized test results delivery and basic reporting (planned)
+- Operational visibility for clinics and laboratories (planned)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+If you run a clinic or lab in Honduras (Tegucigalpa, San Pedro Sula, La Ceiba, etc.), or you are exploring partnerships, please reach out.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Contact
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Preferred: open a GitHub Issue with your clinic/lab name and what you want to integrate
+- Please do not include patient data (PHI) in Issues
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## SEO keywords (for discoverability)
+
+LIS Honduras, sistema de informacion de laboratorio clinico, software para laboratorio clinico en Honduras, software para clinicas en Honduras, gestion de clinicas, gestion de laboratorio clinico, resultados de laboratorio en linea, integracion para clinicas, healthtech Honduras
+
+## Tech
+
+- React + TypeScript + Vite
+- Tailwind CSS
+
+## Local development
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Other commands:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
+npm run lint
 ```
+
+## Copyright & License
+
+Copyright (c) 2026 TheFndrs.
+
+All rights reserved. No license is granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell any portion of this repository without explicit written permission from the copyright holder.
+
+If you are interested in licensing, partnership, or integration for your clinic/lab in Honduras, contact us via GitHub Issues.

@@ -22,7 +22,9 @@ export function TerminosPage() {
         </div>
         <div className="space-y-6 px-6 py-6 text-sm text-gray-700">
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900 font-body">1. Aceptación</h2>
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
+              1. Aceptación
+            </h2>
             <p>
               El acceso y uso de LabCore LIS («el Servicio») implica la
               aceptación de estos términos de uso. Si no está de acuerdo, no
@@ -79,7 +81,9 @@ export function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="mb-2 font-semibold text-gray-900 font-body">5. Contacto</h2>
+            <h2 className="mb-2 font-semibold text-gray-900 font-body">
+              5. Contacto
+            </h2>
             <p>
               Para consultas sobre estos términos o sobre el Servicio puede
               contactar a{' '}

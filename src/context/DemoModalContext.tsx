@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
+import {
+  createContext,
+  useContext,
+  useState,
+  useCallback,
+  type ReactNode,
+} from 'react'
 import { DemoModal } from '../components/DemoModal'
 
 type DemoModalContextValue = {
@@ -21,8 +27,10 @@ export function DemoModalProvider({ children }: { children: ReactNode }) {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useDemoModal() {
   const ctx = useContext(DemoModalContext)
-  if (!ctx) throw new Error('useDemoModal must be used within DemoModalProvider')
+  if (!ctx)
+    throw new Error('useDemoModal must be used within DemoModalProvider')
   return ctx
 }

@@ -77,9 +77,7 @@ export function Pricing() {
       <div className="absolute inset-0 bg-gradient-to-b from-cyan-50/50 to-white -z-10" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-cyan-200/20 rounded-full blur-[100px] -z-10" />
 
-      <div
-        className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 font-body"
-      >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 font-body">
         <motion.div
           className="text-center mb-10 sm:mb-16"
           initial={{ opacity: 0, y: 16 }}
@@ -146,7 +144,9 @@ export function Pricing() {
                     <plan.icon
                       className={`w-5 h-5 flex-shrink-0 ${plan.iconClass}`}
                     />
-                    <h3 className="font-medium text-xl text-gray-900 font-body">{plan.name}</h3>
+                    <h3 className="font-medium text-xl text-gray-900 font-body">
+                      {plan.name}
+                    </h3>
                   </div>
                   <p className="text-sm text-gray-500 mb-4 sm:mb-6">
                     {plan.desc}

@@ -28,7 +28,8 @@ const items = [
   },
   {
     id: 5,
-    question: '¿Puedo enviar los resultados a los pacientes por correo o WhatsApp?',
+    question:
+      '¿Puedo enviar los resultados a los pacientes por correo o WhatsApp?',
     answer:
       'Sí. Puedes enviar el reporte al paciente por correo electrónico o por WhatsApp. El PDF se genera con la plantilla del laboratorio (membrete, logo, datos del laboratorio) cumpliendo el estándar de informes de laboratorio y la normativa vigente aplicable a tu jurisdicción.',
   },
